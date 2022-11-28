@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    target-branch: "main"
+    reviewers:
+      - zt4ff
+    rebase-strategy: auto
+    schedule:
+      interval: monthly
