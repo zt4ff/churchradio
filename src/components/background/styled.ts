@@ -15,7 +15,7 @@ export const BackgroundContainerDiv = styled.div<BackgroundContainerDivProps>`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
-  transition: background-image 3s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
   ${({ type }) =>
     type &&
     css`
