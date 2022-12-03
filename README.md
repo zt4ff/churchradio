@@ -1,5 +1,3 @@
-# Church.radio
+# church.radio
 
-Church Radio is an online radio created for Christians
-
-## Getting Started
+church.radio is an online radio created for Christians
