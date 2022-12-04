@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { PlayLists } from "./index";
+import { PlayLists } from "../../App";
 
 interface BackgroundContainerDivProps {
   type: PlayLists;
