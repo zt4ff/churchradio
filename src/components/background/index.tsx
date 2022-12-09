@@ -1,7 +1,6 @@
 import React from "react";
 import { BackgroundContainerDiv } from "./styled";
-
-export type PlayLists = "sermons" | "rap_gospel" | "chants";
+import { PlayLists } from "../../App";
 
 interface BackgroundProps {
   type: PlayLists;
@@ -10,8 +9,6 @@ interface BackgroundProps {
 
 export const Background: React.FC<BackgroundProps> = ({ children, type }) => {
   return (
-    <BackgroundContainerDiv type={type}>
-      <div>{children}</div>
-    </BackgroundContainerDiv>
+    <BackgroundContainerDiv type={type}>{children}</BackgroundContainerDiv>
   );
 };

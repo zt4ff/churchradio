@@ -1,11 +1,12 @@
 import styled, { css } from "styled-components";
-import { PlayLists } from "./index";
+import { PlayLists } from "../../App";
 
 interface BackgroundContainerDivProps {
   type: PlayLists;
 }
 
 function getImageSrc(type: PlayLists) {
+  // TODO - replace localhost with HOST environment variable
   return `http://localhost:3000/images/${type}.jpg`;
 }
 
