@@ -8,6 +8,15 @@ export const SettingsContainer = styled.div`
   right: 40px;
   text-align: center;
   background: #ffffff3b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  & a {
+    text-decoration: none;
+    color: #000;
+  }
 `;
 
 export const ThumbnailContainer = styled.img`
