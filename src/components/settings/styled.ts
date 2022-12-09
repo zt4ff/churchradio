@@ -15,7 +15,7 @@ export const SettingsContainer = styled.div`
 
   & a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
   }
 `;
 

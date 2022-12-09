@@ -6,6 +6,7 @@ interface BackgroundContainerDivProps {
 }
 
 function getImageSrc(type: PlayLists) {
+  // TODO - replace localhost with HOST environment variable
   return `http://localhost:3000/images/${type}.jpg`;
 }
 

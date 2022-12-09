@@ -11,10 +11,6 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   background: #00000087;
   color: #fff;
 
-  & a {
-    color: #fff;
-  }
-
   ${({ size }) => {
     if (size === "small") return `height: 40px; width: 10px`;
     else if (size === "medium") return `height: 45px; width: 120px`;

@@ -3,6 +3,7 @@ import { PlayLists } from "../../App";
 import { SettingsContainer } from "./styled";
 import { Thumbnail } from "./Thumbnail";
 import { Button } from "../button";
+import { Div } from "../div";
 
 interface SettingsProps {
   setPlayList: (playlist: PlayLists) => void;
@@ -14,14 +15,7 @@ export const Settings: React.FC<SettingsProps> = ({ setPlayList }) => {
   return (
     <SettingsContainer>
       <p style={{ color: "#fff" }}>Change Background</p>
-      <div
-        style={{
-          display: "flex",
-          width: "70%",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
+      <Div>
         {playLists.map((playlist) => {
           return (
             <Thumbnail
@@ -32,9 +26,13 @@ export const Settings: React.FC<SettingsProps> = ({ setPlayList }) => {
             />
           );
         })}
-      </div>
+      </Div>
       <Button>
-        <a target="_blank" href="#">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/zt4ff/churchradio"
+        >
           SUPPORT US
         </a>
       </Button>

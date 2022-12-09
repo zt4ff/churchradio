@@ -9,8 +9,6 @@ interface BackgroundProps {
 
 export const Background: React.FC<BackgroundProps> = ({ children, type }) => {
   return (
-    <BackgroundContainerDiv type={type}>
-      <div>{children}</div>
-    </BackgroundContainerDiv>
+    <BackgroundContainerDiv type={type}>{children}</BackgroundContainerDiv>
   );
 };
