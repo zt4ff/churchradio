@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const MediaControllerContainer = styled.div`
+  height: 100px;
   position: absolute;
   bottom: 20px;
   right: 50%;
@@ -12,5 +13,9 @@ export const MediaControllerContainer = styled.div`
 
   & button {
     font-size: 40px;
+  }
+
+  & button:nth-of-type(2) {
+    font-size: 60px;
   }
 `;

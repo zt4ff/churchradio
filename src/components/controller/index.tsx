@@ -8,10 +8,11 @@ export const MediaController: React.FC = () => {
 
   return (
     <MediaControllerContainer>
-      <Button size="large">
+      <Button size="large" variant="outlined">
         <FaBackward />
       </Button>
       <Button
+        variant="outlined"
         size="large"
         onClick={() => {
           console.log("working");
@@ -20,7 +21,7 @@ export const MediaController: React.FC = () => {
       >
         {isPlaying ? <FaPause /> : <FaPlay />}
       </Button>
-      <Button size="large">
+      <Button variant="outlined" size="large">
         <FaForward />
       </Button>
     </MediaControllerContainer>
