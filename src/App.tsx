@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { Background } from "./components/background";
 import { Settings } from "./components/settings";
+import { MediaController } from "./components/controller";
 
 export type PlayLists = "sermons" | "rap_gospel" | "chants";
 
@@ -10,13 +11,14 @@ function App() {
 
   return (
     <Background type={playList}>
-      <div>
+      <>
         <Settings
           setPlayList={(playlist: PlayLists) => {
             setPlayList(playlist);
           }}
         />
-      </div>
+        <MediaController />
+      </>
     </Background>
   );
 }
