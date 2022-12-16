@@ -38,7 +38,6 @@ export const MediaController: React.FC = () => {
           variant="outlined"
           size="large"
           onClick={() => {
-            console.log("working");
             setIsPlaying((x) => !x);
           }}
         >
