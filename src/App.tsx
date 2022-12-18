@@ -3,6 +3,7 @@ import "./App.css";
 import { Background } from "./components/background";
 import { Settings } from "./components/settings";
 import { MediaController } from "./components/controller";
+import { PlaylistDropDown } from "./components/playlist_dropdown";
 
 export type PlayLists = "sermons" | "rap_gospel" | "chants";
 
@@ -18,6 +19,7 @@ function App() {
           }}
         />
         <MediaController />
+        <PlaylistDropDown />
       </>
     </Background>
   );
