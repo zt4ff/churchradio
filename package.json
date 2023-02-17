@@ -46,6 +46,6 @@
   "devDependencies": {
     "@types/react-icons": "^3.0.0",
     "@types/styled-components": "^5.1.26",
-    "husky": "^8.0.0"
+    "husky": "^8.0.3"
   }
 }
