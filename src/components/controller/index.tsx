@@ -27,38 +27,46 @@ export const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({
 export const MediaController: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [songName , setSongName] = useState<string>('Jesus is Lord - Drake')
+  const [songAudio, setSongAudio] = useState<string>('')
 
 
   const songs = [
-    'Halleluja - donny',
-    'bles lord - joghn',
-    'Hall - d',
-    'yes lord- funshy',
+    {songName:'Halleluja - donny',songAudio:'link to song'},
+    {songName:'bles lord - joghn',songAudio:'link to song'},
+    {songName:'yes lord - funsho',songAudio:'link to song'},
+    {songName:'Hall - d',songAudio:'link to song'}
    ]
 
+
+   const play = async () => {
+    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387"); 
+        await audio.play();
+   }
+
 const next = async () => {
-  setSongName(songs[Math.floor(Math.random()*songs.length)]);
+  await setSongName(songs[Math.floor(Math.random()*songs.length)].songName);
 }
   return (
     <>
       <CurrentlyPlaying songName={songName}/>
       <MediaControllerContainer>
         <Button size="large" variant="outlined">
-          <FaBackward onClick={()=> next()}/>
+          <FaBackward onClick={()=>{ next(); play()}}/>
         </Button>
         <Button
           variant="outlined"
           size="large"
           onClick={() => {
             setIsPlaying(!isPlaying);
-            console.log('ready to play');
-          
+            if(!isPlaying){
+              play();
+           }
           }}
         >
           {isPlaying ? <FaPause /> : <FaPlay />}
         </Button>
         <Button variant="outlined" size="large">
-          <FaForward onClick={()=> next()}/>
+          <FaForward onClick={()=>{ next() ; play()}}/>
         </Button>
       </MediaControllerContainer>
     </>
