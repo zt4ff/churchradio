@@ -25,26 +25,40 @@ export const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({
 };
 
 export const MediaController: React.FC = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [songName , setSongName] = useState<string>('Jesus is Lord - Drake')
 
+
+  const songs = [
+    'Halleluja - donny',
+    'bles lord - joghn',
+    'Hall - d',
+    'yes lord- funshy',
+   ]
+
+const next = async () => {
+  setSongName(songs[Math.floor(Math.random()*songs.length)]);
+}
   return (
     <>
-      <CurrentlyPlaying songName="Jesus is Lord - Drake" />
+      <CurrentlyPlaying songName={songName}/>
       <MediaControllerContainer>
         <Button size="large" variant="outlined">
-          <FaBackward />
+          <FaBackward onClick={()=> next()}/>
         </Button>
         <Button
           variant="outlined"
           size="large"
           onClick={() => {
-            setIsPlaying((x) => !x);
+            setIsPlaying(!isPlaying);
+            console.log('ready to play');
+          
           }}
         >
           {isPlaying ? <FaPause /> : <FaPlay />}
         </Button>
         <Button variant="outlined" size="large">
-          <FaForward />
+          <FaForward onClick={()=> next()}/>
         </Button>
       </MediaControllerContainer>
     </>
