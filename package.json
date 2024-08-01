@@ -15,7 +15,7 @@
     "react-icons": "^5.2.1",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.11",
-    "typescript": "^5.4.5",
+    "typescript": "^5.5.4",
     "web-vitals": "^4.2.1"
   },
   "scripts": {
