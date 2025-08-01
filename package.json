@@ -16,7 +16,7 @@
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.18",
     "typescript": "^5.8.3",
-    "web-vitals": "^5.0.2"
+    "web-vitals": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
