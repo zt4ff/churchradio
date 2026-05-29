@@ -9,6 +9,12 @@ import {
   FaMusic,
 } from "react-icons/fa";
 
+const PlayIcon = FaPlay as unknown as React.FC<any>;
+const PauseIcon = FaPause as unknown as React.FC<any>;
+const ForwardIcon = FaForward as unknown as React.FC<any>;
+const BackwardIcon = FaBackward as unknown as React.FC<any>;
+const MusicIcon = FaMusic as unknown as React.FC<any>;
+
 interface CurrentlyPlayingProps {
   songName?: string;
 }
@@ -18,7 +24,7 @@ export const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({
 }) => {
   return (
     <CurrentlyPlayingContainer>
-      <FaMusic />
+      <MusicIcon />
       <p>{songName || ""}</p>
     </CurrentlyPlayingContainer>
   );
@@ -51,7 +57,7 @@ const next = async () => {
       <CurrentlyPlaying songName={songName}/>
       <MediaControllerContainer>
         <Button size="large" variant="outlined">
-          <FaBackward onClick={()=>{ next(); play()}}/>
+          <BackwardIcon onClick={()=>{ next(); play()}}/>
         </Button>
         <Button
           variant="outlined"
@@ -63,10 +69,10 @@ const next = async () => {
            }
           }}
         >
-          {isPlaying ? <FaPause /> : <FaPlay />}
+          {isPlaying ? <PauseIcon /> : <PlayIcon />}
         </Button>
         <Button variant="outlined" size="large">
-          <FaForward onClick={()=>{ next() ; play()}}/>
+          <ForwardIcon onClick={()=>{ next() ; play()}}/>
         </Button>
       </MediaControllerContainer>
     </>
